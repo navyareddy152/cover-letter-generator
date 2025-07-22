@@ -13,7 +13,7 @@ genai.configure(api_key=API_KEY)
 
 # ---------------------------
 # Helper: Extract text from PDF
-# ---------------------------
+# --------------------------- 
 def extract_pdf_text(uploaded_file):
     """
     Reads and extracts all text from a PDF file uploaded by the user.
@@ -24,7 +24,7 @@ def extract_pdf_text(uploaded_file):
         for page in reader.pages:
             text += page.extract_text()
         return text
-    except Exception as e:
+    except Exception as e: 
         st.error(f"Couldn't read your PDF. Error: {e}")
         return None
 
